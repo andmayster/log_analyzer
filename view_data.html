@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer</title>
+</head>
+<body>
+<h1>VIEW Analyzed Logs</h1>
+
+<form action="view_log_data.py" method="post">
+    <br>
+    <label>Select site - </label>
+    <select name="site" style="font-size: 15px">
+        <option value="loc8nearme">Loc8nearme</option>
+        <option value="restaurantji">Restaurantji</option>
+        <option value="bestprosintown">Bestprosintown</option>
+    </select>
+    <br><br>
+    <label>Select month - </label>
+    <select name="month" style="font-size: 15px">
+        <option value="Jan">Jan</option>
+        <option value="Feb">Feb</option>
+        <option value="Mar">Mar</option>
+        <option value="Apr">Apr</option>
+        <option value="May">May</option>
+        <option value="Jun">Jun</option>
+        <option value="Jul">Jul</option>
+        <option value="Aug">Aug</option>
+    </select>
+    <br><br>
+    <label><input type="checkbox" name="prints">PRINT RESULT</label><br><br>
+        <b>IF REQUEST IS TIMEOUT, CLEAR CACHE, AND RUN SCRIPT WITHOUT PRINT RESULT</b><br>
+        <b>AFTER RUN, CLOSE PAGE.</b><br>
+        <b>OPEN VIEW LOG ANALYZER AGAIN, AND START REQUEST AGAIN</b><br><br>
+    <label>PRESS TO START - </label>
+    <input type="submit" value="GOGO" style="font-size: 15px">
+
+</form>
+<br>
+
+            <form action="remove_file.py" method="post">
+                <input type="hidden" id="OFF" name="script">
+                <input type="submit" value="STOP SCRIPT" style="font-size: 15px">
+            </form>
+            <br>
+            <form action="clear_cache.py" method="post" >
+                <input type="submit" value="CLEAR CACHE" style="font-size: 15px">
+            </form>
+
+    <hr>
+    <form action="doc.html">
+        <input type="hidden" id="doc" name="documentations">
+        <input type="submit" value="DOCUMENTATIONS">
+    </form>
+
+</body>
+</html>
+

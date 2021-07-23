@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer</title>
+</head>
+<body>
+<h1>Analyze Log</h1>
+
+<form action="analyze_log.py" method="post">
+    <br><label>Enter file log name</label>
+        <input type="text" name="TEXT" size="220" required><br>
+        <br><label>Count lines in log file(for testing, example - 1000) - <b>default 100000000000000(unlimited)</b></label><br>
+        <input type="text" name="count" size="16"><br><br>
+        <label><input type="checkbox" name="prints">PRINT RESULT</label><br><br>
+        <b>WARNING!!! IF CHECKBOX "PRINT RESULT" IS ENABLED, ALL ACTIONS WILL BE PRINT ON PAGE</b><br>
+        <b>NOT RECOMMENDED FOR BIG REQUESTS</b><br>
+        <br><b>WARNING!!! BEFORE START, CHECK IF EXIST TABLE IN DATABASE WITH NAME THIS LOG FILE</b><br><br>
+        <input type="submit" value="GOGO" style="font-size: 15px">
+</form>
+<br>
+
+            <form action="remove_file.py" method="post">
+                <input type="hidden" id="OFF" name="script">
+                <input type="submit" value="STOP SCRIPT" style="font-size: 15px">
+            </form>
+
+    <hr>
+    <br>
+<form action="view_data.html">
+    <input type="submit" value="VIEW ANALYZING LOGS" style="font-size: 15px">
+</form>
+<br><br>
+
+    <form action="doc.html">
+        <input type="hidden" id="doc" name="documentations">
+        <input type="submit" value="DOCUMENTATIONS" style="font-size: 15px">
+    </form>
+
+</body>
+</html>
+
